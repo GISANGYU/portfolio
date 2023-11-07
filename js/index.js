@@ -38,39 +38,34 @@ $(function () {
       x: "-50%",
     });
     if(scrollTop<1000 && scrollTop>0){
-      gsap.fromTo(
+      gsap.to(
         ".sky",
-        { y: 0, opacity: 1 },
         { y: -scrollTop / 2,opacity: opacityCloude + 1  },
         0
       );
-      gsap.fromTo(".cloud1", { y: 300 }, { y: -scrollTop * 2 }, 0);
-      gsap.fromTo(
+      gsap.to(".cloud1", { y: -scrollTop * 2 }, 0);
+      gsap.to(
         ".cloud2",
-        { y: -150, opacity: 1 },
         { y: -scrollTop * 1.5, opacity: opacityCloude + 0.2 },
         0
       );
-      gsap.fromTo(".cloud3", { y: -50 }, { y: -scrollTop * 1.4 }, 0);
-      gsap.fromTo(
+      gsap.to(".cloud3", { y: -scrollTop * 1.4 }, 0);
+      gsap.to(
         ".mountBg",
-        { y: -30, opacity: 1 },
         { y: -scrollTop / 4, opacity: opacityCloude + 1 * 0.3 },
         0
       );
-      gsap.fromTo(
+      gsap.to(
         ".mountMg",
-        { y: -30, opacity: 1 },
         { y: -scrollTop / 1.8, opacity: opacityCloude + 1 * 0.5 },
         0
       );
-      gsap.fromTo(
+      gsap.to(
         ".mountFg",
-        { y: -50, opacity: 1 },
         { y: -scrollTop * 1, opacity: opacityCloude + 1 * 0.8 },
         0
       );
-      gsap.fromTo(".gisang", { y: -150 }, { y: -scrollTop * 1 }, 0);
+      gsap.to(".gisang", { y: -scrollTop * 1 }, 0);
     }
     
     
@@ -87,10 +82,10 @@ $(function () {
       
     gsap.set(".main", { opacity: opacity });
 
-    gsap.fromTo(
+    gsap.to(
       ".content",
-      {opacity: 0 },
-      {opacity: (scrollTop - 1000) /100 *0.3 },
+      
+      {opacity: (scrollTop - 300) /100 *0.3 },
       0
     );
 
@@ -98,58 +93,63 @@ $(function () {
 
     
 
-    if(scrollTop>1500 && scrollTop<2500){
-      gsap.fromTo(
+    if(scrollTop>700 && scrollTop<1500){
+      gsap.to(
         ".part1",
-        {opacity: 0 },
-        {opacity: (scrollTop - 1500) /100 *0.4 },
+        
+        {opacity: (scrollTop - 700) /100 *0.4 },
         0
       );
-     if(scrollTop>1800 && scrollTop<2500){
+     if(scrollTop>1000 && scrollTop<1500){
       addWidth()
      }else{
       
      }
-    }else if(scrollTop>2500){
-      gsap.fromTo(
+    }else if(scrollTop>1500){
+      gsap.to(
         ".part1",
-        {opacity: 1 },
-        {opacity: (opacity +20)},
+        
+        {opacity: ((opacity +13)*0.3)},
         0
       );
-      removeWidth()
+      if (scrollTop>1600){
+        removeWidth()
+      }
+      
     }else{
       removeWidth()
     }
-    const part2 = (opacity+28)*10+30 
+    const part2 = (opacity+28)*10-100 
+    console.log(part2)
     
-    
-    if(scrollTop>2500 && scrollTop<4000){
-      gsap.fromTo(
+    if(scrollTop>1750 && scrollTop<3000){
+      gsap.to(
         ".part2",
-        {opacity: 0 },
-        {opacity: (scrollTop-3000)/600},
+        
+        {opacity: (scrollTop-1750)/800},
         0
       );
 
-      if(part2 <= 0){
-        gsap.fromTo(
+      if(part2<=0){
+        gsap.to(
           ".part2",
-          {top: 0 },
-          {top: 0},
+          
+          {top: 0+"%"},
           0
         );
       }else{
-        gsap.fromTo(
+        gsap.to(
           ".part2",
-          {top: 100+"%"},
+          
           {top: part2+"%"},
           0
         );
       }
+        
+      
       
     }
-    if(scrollTop>3000 && 6000){
+    if(scrollTop>1500 && 4000){
       $(".part2").css({display:"block"})
     }else{
       $(".part2").css({display:"none"})
