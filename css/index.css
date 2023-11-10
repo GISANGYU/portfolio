@@ -148,7 +148,7 @@ width:100%;} */
 
   #con1 {
     width: 100%;
-    height: 820vh;
+    height: 720vh;
     position: relative;
     transform: translateY(-700px);
   }
@@ -614,7 +614,7 @@ width:100%;} */
   /* 콘2 */
   #con2 {
     width: 100%;
-    height: 400vh;
+    height: 320vh;
     position: relative;
     transform: translateY(-700px);
   }

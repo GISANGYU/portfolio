@@ -230,10 +230,10 @@ $(function () {
           );
         }
       }
-      const scrollCon2Top = (scrollTop - 8600) * 0.7;
-      const scrollCon2Bottom = (scrollTop - 8600) * 0.67;
+      const scrollCon2Top = (scrollTop - 8200) * 0.7;
+      const scrollCon2Bottom = (scrollTop - 8200) * 0.67;
       //con2 scroll box
-      if (scrollTop > 8600 && scrollTop < 10500) {
+      if (scrollTop > 8200 && scrollTop < 10500) {
         if (scrollCon2Top > 10 && scrollCon2Top < 1280) {
           gsap.to(
             ".con2_top",
@@ -279,7 +279,7 @@ $(function () {
             0
           );
         }
-      } else if (scrollTop < 8600) {
+      } else if (scrollTop < 8200) {
         gsap.to(
           ".con2_top",
 
@@ -322,6 +322,31 @@ $(function () {
       $(".fill80").removeClass("on");
       $(".fill55").removeClass("on");
     }
+  } else if (windowWidth <= 600) {
+    $(".after").text("Node");
+    $(".highSchool").eq(0).text("인천디자인고등학교");
+    $(".highSchool").eq(0).css({ fontSize: "14px" });
+    $(".highSchool").eq(1).text("시각디자인과 졸업");
+    $(".ezen").eq(0).text("이젠아카데미");
+    $(".ezen").eq(1).text("웹프레임워크 개발과정");
+    $(".ezen").eq(1).css({ fontSize: "12px" });
+    $(".javaScript").text("JS");
+    $(".ps").text("PS");
+    $(".ai").text("AI");
+    $(".cer_com").text("컴퓨터그래픽스 기능사");
+    setTimeout(function () {
+      for (let i = 0; i < 9; i++) {
+        setTimeout(function () {
+          $(".innerWrap h2 span").eq(i).addClass("on");
+        }, i * 50);
+        setTimeout(function () {
+          $(".innerWrap h2 span").eq(i).addClass("onS");
+        }, i * 50 + 300);
+      }
+    }, 500);
+    setTimeout(function () {
+      $(".myName h3").addClass("on");
+    }, 1500);
   } else {
     $(window).on("scroll", function (event) {
       var scrollTop = $(window).scrollTop();

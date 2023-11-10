@@ -1,4 +1,167 @@
+.m_intro {
+  display: none;
+  font-family: "TAEBAEKfont";
+  width: 100%;
+  height: 100vh;
+  background: url(../img/bg.png);
+  position: relative;
+}
+
+.m_intro .innerWrap {
+  min-width: 300px;
+  width: 70%;
+  height: 200px;
+
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+}
+
+.innerWrap h2 {
+  color: white;
+  font-size: 0vw;
+  line-height: 10vw;
+  width: 100%;
+  height: 100%;
+  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.innerWrap h2 span {
+  transform: translateY(50%);
+  opacity: 0%;
+  transition: 0.5s;
+}
+.innerWrap h2 span.on {
+  transform: translateY(0);
+
+  opacity: 100%;
+  font-size: 10vw;
+}
+
+.myName {
+  width: 70%;
+  min-width: 50px;
+  height: 100px;
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.myName h3 {
+  font-family: "Pretendard-Regular";
+
+  color: white;
+  font-size: 0vw;
+  letter-spacing: 0.3vw;
+  line-height: 10vw;
+  width: 100%;
+  height: 100%;
+  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+}
+.myName h3.on {
+  font-size: 4vw;
+}
+.scrollDiv {
+  width: 70px;
+  height: 70px;
+
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  opacity: 0%;
+  animation: showTime 5s forwards;
+}
+
+@keyframes showTime {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+.scrollDiv .mouse {
+  width: 50%;
+  height: 80%;
+  margin: 0px auto;
+  border: 1px solid white;
+  border-radius: 30px;
+  position: relative;
+  animation: moveMouse 1.5s infinite linear;
+}
+@keyframes moveMouse {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+.scrollDiv .mouse p {
+  text-align: center;
+  position: absolute;
+  bottom: -20px;
+  transform: translateX(-50%);
+  left: 50%;
+  color: white;
+  font-weight: normal;
+  font-size: 12px;
+}
+.scrollDiv .mouse .mouseMove {
+  position: absolute;
+  width: 5px;
+  height: 10px;
+  background-color: white;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 5px;
+
+  animation: wheel 1.5s infinite linear;
+}
+
+@keyframes wheel {
+  0% {
+    top: 5px;
+  }
+  100% {
+    top: 15px;
+    opacity: 0%;
+  }
+}
+
 @media (max-width: 1800px) {
+  /* 작업끝나면 지우기 */
+
+  .textWrap {
+    position: absolute;
+    width: 800px;
+
+    bottom: 10vw;
+    right: 2vw;
+    display: flex;
+    font-family: "Pretendard-Regular";
+    justify-content: center;
+  }
+
   #con2 {
     display: none;
   }
@@ -39,6 +202,9 @@
     position: absolute;
     bottom: 0px;
   }
+  .profile img {
+    height: 50%;
+  }
 
   .textLeft {
     width: 45%;
@@ -54,7 +220,7 @@
     padding-left: 10px;
   }
   .textRight {
-    width: 56%;
+    width: 55%;
   }
   .textRight .rightTop {
     width: 100%;
@@ -63,22 +229,27 @@
   .textRight .rightBottom {
     width: 100%;
     height: 45%;
-    padding-top: 50px;
+    padding-top: 0px;
   }
 
   .textWrap h6 {
-    font-size: 24px;
+    font-size: 20px;
     letter-spacing: +0.02vw;
     color: #66fdc6;
   }
 
+  .leftBottom h6,
+  .rightBottom {
+    margin-top: 50px;
+  }
+
   .information {
     gap: 10px;
-    row-gap: 1rem;
+    row-gap: 28px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: 25px;
+    margin-top: 20px;
   }
   .information li {
     width: 100%;
@@ -95,13 +266,13 @@
   }
 
   .certificate {
-    gap: 10px;
-    row-gap: 24px;
+    row-gap: 10px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: 20px;
+    margin-top: 30px;
   }
+
   .certificate li {
     width: 100%;
     display: flex;
@@ -138,35 +309,6 @@
   .edu_left {
     font-size: 18px;
     color: #ffffffd4;
-  }
-  .edu_right p:nth-of-type(1) {
-    font-size: 18px;
-    color: #ffffff;
-  }
-  .edu_right p:nth-of-type(2) {
-    font-size: 15px;
-    color: #ffffffd4;
-    margin-top: 2px;
-  }
-
-  .contentWrap {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    background: url(../시안/Artboard\ 3_m.png) no-repeat center/cover;
-
-    background-position: 50%;
-    overflow: hidden;
-  }
-
-  .part3 .contentWrap {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    background: url(../시안/Artboard\ 4_m.png) no-repeat center/cover;
-
-    background-position: 50%;
-    overflow: hidden;
   }
 
   .cap {
@@ -313,28 +455,60 @@
   .buttonWrap ul li a {
     color: white;
   }
+
+  .edu_right p:nth-of-type(1) {
+    font-size: 18px;
+    color: #ffffff;
+  }
+  .edu_right p:nth-of-type(2) {
+    font-size: 15px;
+    color: #ffffffd4;
+    margin-top: 2px;
+  }
+
+  .contentWrap {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: url(../시안/Artboard\ 3_m.png) no-repeat center/cover;
+
+    background-position: 50%;
+    overflow: hidden;
+  }
+
+  .part3 .contentWrap {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: url(../시안/Artboard\ 4_m.png) no-repeat center/cover;
+
+    background-position: 50%;
+    overflow: hidden;
+  }
 }
 
 @media (max-width: 1800px) and (min-width: 1281px) {
+  .profile img {
+    height: 50%;
+  }
+
   .part1 {
     width: 100%;
     height: 800px;
     display: flex;
-    background-color: rgb(0, 0, 0);
+    background: url(../img/bg.png) no-repeat center/cover;
     overflow: hidden;
     position: relative;
   }
 
   .textWrap {
-    border: 1px solid white;
     position: absolute;
     width: 800px;
-
-    bottom: 93px;
+    bottom: 200px;
     right: 2vw;
     display: flex;
     font-family: "Pretendard-Regular";
-    justify-content: space-between;
+    justify-content: center;
   }
   .part2,
   .part3,
@@ -415,7 +589,7 @@
 
   .part2 .textContent {
     scale: calc(0.7);
-    bottom: 90px;
+    bottom: -100px;
   }
   .part3 .textContent {
     scale: calc(0.7);
@@ -431,8 +605,32 @@
     top: 10px;
     position: absolute;
   }
+
+  .contentWrap {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: url(../시안/Artboard\ 3_m.png) no-repeat center/cover;
+
+    background-position: 50%;
+    overflow: hidden;
+  }
+
+  .part3 .contentWrap {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: url(../시안/Artboard\ 4_m.png) no-repeat center/cover;
+
+    background-position: 50%;
+    overflow: hidden;
+  }
 }
 @media (max-width: 1280px) {
+  .profile img {
+    width: 800px;
+  }
+
   .textContent {
     width: 650px;
     left: -120px;
@@ -473,10 +671,10 @@
     scale: calc(0.7);
     /* border: 1px solid white; */
     position: absolute;
-    width: 100%;
-
-    top: 0%;
-    transform: translateX(15%);
+    width: 800px;
+    top: 10%;
+    transform: translateX(0);
+    right: -100px;
     display: flex;
     font-family: "Pretendard-Regular";
     justify-content: center;
@@ -488,7 +686,7 @@
     justify-content: space-between;
     padding: 0px 8px;
     margin-top: 20px;
-    row-gap: 17px;
+    row-gap: 8px;
   }
   .skills li {
     width: 45%;
@@ -503,14 +701,14 @@
   }
   .skills li .skillBottom {
     width: 100%;
-    height: 12px;
+    height: 10px;
     background-color: white;
     border-radius: 5px;
-    margin-top: 10px;
+    margin-top: 5px;
     overflow: hidden;
   }
   .skills li .skillBottom .fill {
-    height: 12px;
+    height: 10px;
     background-color: #66fdc6;
   }
 
@@ -549,5 +747,136 @@
   }
   .fill55 {
     width: 55%;
+  }
+
+  .edu_right p:nth-of-type(1) {
+    font-size: 16px;
+    color: #ffffff;
+  }
+  .edu_right p:nth-of-type(2) {
+    font-size: 13px;
+    color: #ffffffd4;
+    margin-top: 2px;
+  }
+}
+
+@media (max-width: 600px) {
+  .information {
+    margin-top: 20px;
+  }
+  .certificate {
+    row-gap: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+
+  .contentWrap {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: url(../시안/Artboard\ 3_p.png) no-repeat center/cover;
+
+    background-position: 50%;
+    overflow: hidden;
+  }
+
+  .part3 .contentWrap {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: url(../시안/Artboard\ 4_p.png) no-repeat bottom/cover;
+
+    overflow: hidden;
+  }
+  .certificate li {
+    width: 100%;
+    display: block;
+    gap: 10px;
+  }
+  .skills li .skillBottom {
+    width: 100%;
+    height: 7px;
+    background-color: white;
+    border-radius: 2px;
+    margin-top: 5px;
+    overflow: hidden;
+  }
+  .skills li .skillBottom .fill {
+    height: 7px;
+    background-color: #66fdc6;
+  }
+
+  .gap {
+    display: none;
+  }
+  .textContent {
+    width: 650px;
+    left: -140px;
+    top: 10px;
+    position: absolute;
+  }
+  .cap {
+    font-size: 10px;
+    color: #ffffffd4;
+    padding: 50px 24px 0px;
+  }
+
+  .leftBottom h6,
+  .rightBottom {
+    margin-top: 0px;
+  }
+
+  .textWrap {
+    scale: calc(0.7);
+    /* border: 1px solid white; */
+    position: absolute;
+    width: 120%;
+    top: 0%;
+    right: -40px;
+    transform: translateX(0);
+    display: flex;
+    font-family: "Pretendard-Regular";
+    justify-content: center;
+  }
+}
+@media (max-width: 800px) and (min-width: 1px) {
+  .wrap {
+    display: none;
+  }
+  .gap {
+    display: none;
+  }
+  .m_intro {
+    display: block;
+    font-family: "TAEBAEKfont";
+    width: 100%;
+    height: 100vh;
+    background: url(../img/bg.png);
+    position: relative;
+  }
+
+  .part1 .profile {
+    width: 70%;
+    opacity: 50%;
+    position: absolute;
+    bottom: 0px;
+  }
+}
+
+@media (min-width: 801px) {
+  .wrap {
+    display: block;
+  }
+}
+@media (max-height: 550px) {
+  .gap {
+    display: block;
+  }
+}
+@media (min-height: 551px) {
+  .gap {
+    display: none;
   }
 }
