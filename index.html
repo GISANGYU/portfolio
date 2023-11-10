@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="css/index.css" rel="stylesheet" />
+    <link href="css/mobile.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollToPlugin.min.js"></script>
+    <script src="js/jquery-3.7.0.min.js"></script>
+    <script src="js/index.js"></script>
+  </head>
+  <body>
+    <div class="scrollDist"></div>
+
+    <div class="wrap">
+      <div class="main">
+        <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+          <mask id="m">
+            <g class="cloud1">
+              <rect fill="#fff" width="100%" height="801" y="799" />
+              <image
+                xlink:href="https://assets.codepen.io/721952/cloud1Mask.jpg"
+                width="1200"
+                height="800"
+              />
+            </g>
+          </mask>
+
+          <image
+            class="sky"
+            xlink:href="img/background3.png"
+            width="1200"
+            height="590"
+          />
+          <image
+            class="mountBg"
+            xlink:href="img/mount3.png"
+            width="1200"
+            height="800"
+            y="-100"
+          />
+          <image
+            class="mountMg"
+            xlink:href="img/mount2_2.png"
+            width="1200"
+            height="800"
+            y="-100"
+          />
+          <image
+            class="cloud2"
+            xlink:href="img/cloudy3.png"
+            width="1200"
+            height="800"
+            y="-200"
+          />
+          <image
+            class="mountFg"
+            xlink:href="img/mount1_2.png"
+            width="1200"
+            height="800"
+            y="-100"
+          />
+
+          <image
+            class="gisang"
+            xlink:href="img/기상누끼10.png"
+            width="1200"
+            height="800"
+            y="-150"
+          />
+          <image
+            class="cloud1"
+            xlink:href="https://assets.codepen.io/721952/cloud1.png"
+            width="1200"
+            height="800"
+            y="300"
+          />
+          <image
+            class="cloud3"
+            xlink:href="https://assets.codepen.io/721952/cloud3.png"
+            width="1200"
+            height="800"
+          />
+          <text fill="#fff" x="425" y="270" class="arrow-blink">GISANG's</text>
+          <text fill="#fff" x="565" y="330" class="scroll">SCROLL</text>
+          <polyline
+            class="arrow arrow-blink"
+            fill="#fff"
+            points="599,350 599,389 590,379 590,382 600,392 610,382 610,379 601,389 601,350"
+          />
+
+          <g mask="url(#m)">
+            <rect fill="#fff" width="100%" height="100%" />
+            <text x="380" y="270" fill="#162a43">PORTFOLIO</text>
+          </g>
+        </svg>
+      </div>
+    </div>
+    <div class="m_intro">
+      <div class="innerWrap">
+        <h2>
+          <span>P</span>
+          <span>O</span>
+          <span>R</span>
+          <span>T</span>
+          <span>F</span>
+          <span>O</span>
+          <span>L</span>
+          <span>I</span>
+          <span>O</span>
+        </h2>
+      </div>
+      <a href="#">
+        <div class="myName">
+          <h3>@GISANG_YU</h3>
+        </div>
+      </a>
+      <div class="scrollDiv">
+        <div class="mouse">
+          <div class="mouseMove"></div>
+          <p>scroll</p>
+        </div>
+      </div>
+    </div>
+    <div id="container">
+      <div id="con1">
+        <div class="content">
+          <!-- <img src="img/bg.png" class="sian"> -->
+          <!-- <img src="시안/Artboard 2.png"> -->
+          <div class="gap"></div>
+          <div class="part1Wrap">
+            <div class="part1">
+              <div class="profile">
+                <img src="img/profile3.png" />
+              </div>
+              <div class="textWrap">
+                <div class="textLeft">
+                  <div class="leftTop">
+                    <h6>INFORMATION</h6>
+                    <ul class="information">
+                      <li>
+                        <p>#NAME?</p>
+                        <p>유기상</p>
+                      </li>
+                      <li>
+                        <p>BirthDay</p>
+                        <p>2000.09.21</p>
+                      </li>
+                      <li>
+                        <p>PhoneNumber</p>
+                        <p>010.7355.2647</p>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="leftBottom">
+                    <h6>CERTIFICATE</h6>
+                    <ul class="certificate">
+                      <li>
+                        <p>2023.09</p>
+                        <p>웹디자인 기능사</p>
+                      </li>
+                      <li>
+                        <p>2018.07</p>
+                        <p>전자출판 기능사</p>
+                      </li>
+                      <li>
+                        <p>2018.06</p>
+                        <p class="cer_com">컴퓨터그래픽스 운용 기능사</p>
+                      </li>
+                      <li>
+                        <p>2015.06</p>
+                        <p>GTQ 포토샵 1급</p>
+                      </li>
+                      <li>
+                        <p>2013.03</p>
+                        <p>GTQ 일러스트 1급</p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="textRight">
+                  <div class="rightTop">
+                    <h6 class="padding8">SKILLS</h6>
+                    <ul class="skills">
+                      <li>
+                        <div class="skillTop">
+                          <p>HTML</p>
+                          <p>95%</p>
+                        </div>
+                        <div class="skillBottom">
+                          <div class="fill fill95"></div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="skillTop">
+                          <p>REACT</p>
+                          <p>55%</p>
+                        </div>
+                        <div class="skillBottom">
+                          <div class="fill fill55"></div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="skillTop">
+                          <p>CSS</p>
+                          <p>95%</p>
+                        </div>
+                        <div class="skillBottom">
+                          <div class="fill fill95"></div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="skillTop">
+                          <p class="after">After Effect</p>
+                          <p>85%</p>
+                        </div>
+                        <div class="skillBottom">
+                          <div class="fill fill85"></div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="skillTop">
+                          <p class="javaScript">Java Script</p>
+                          <p>80%</p>
+                        </div>
+                        <div class="skillBottom">
+                          <div class="fill fill80"></div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="skillTop">
+                          <p class="ps">Photoshop</p>
+                          <p>90%</p>
+                        </div>
+                        <div class="skillBottom">
+                          <div class="fill fill90"></div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="skillTop">
+                          <p>jQuery</p>
+                          <p>85%</p>
+                        </div>
+                        <div class="skillBottom">
+                          <div class="fill fill85"></div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="skillTop">
+                          <p class="ai">Illustrator</p>
+                          <p>95%</p>
+                        </div>
+                        <div class="skillBottom">
+                          <div class="fill fill95"></div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="rightBottom">
+                    <h6 class="padding8">EDUCATION</h6>
+                    <ul class="education">
+                      <li>
+                        <div class="edu_left">2023.12</div>
+                        <div class="edu_right">
+                          <p class="ezen">이젠아카데미평생교육원 수료</p>
+                          <p class="ezen">
+                            모바일 UI/UX & Java기반 웹 프레임워크 개발과정
+                          </p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="edu_left">2019.02</div>
+                        <div class="edu_right">
+                          <p class="highSchool">인천디자인고등학교 졸업</p>
+                          <p class="highSchool">시각디자인과</p>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="part2">
+            <div class="contentWrap">
+              <p class="cap">REDESIGN I PUBLISHING</p>
+              <div class="textContent">
+                <div class="title">
+                  <h2><span>P</span>IXAR</h2>
+                  <h3>WEB <span>R</span>EDESIGN</h3>
+                  <p class="subT">영화사 <픽사> 웹페이지 리디자인</p>
+                </div>
+                <div class="middleText">
+                  <p>
+                    PIXAR는 수많은 명작 애니메이션을 배출해낸 애니메이션 영화
+                    회사입니다.
+                    <br />
+                    기존 웹페이지에서는 따로 제공하는 스트리밍 서비스가 없어
+                    <br />
+                    REACT를 활용하여 스트리밍 서비스를 구현하였습니다.
+                  </p>
+                </div>
+                <div class="bottomText">
+                  <ul class="type">
+                    <li>
+                      <div class="titleType">TYPE</div>
+                      <div>Responsive Web / Redesign</div>
+                    </li>
+                    <li>
+                      <div class="titleType">PAGE</div>
+                      <div>Main + Sub*4</div>
+                    </li>
+                    <li>
+                      <div class="titleType korean">참여도</div>
+                      <div>100% (개인작업)</div>
+                    </li>
+                    <li>
+                      <div class="titleType">TOOL</div>
+                      <div class="imgWrap">
+                        <img src="img/icon_react.png" />
+                        <img src="img/icon_css.png" />
+                        <img src="img/icon_javascript.png" />
+                        <span></span>
+                        <img src="img/icon_ai.png" />
+                        <img src="img/icon_ps.png" />
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="buttonWrap">
+                  <ul>
+                    <li>
+                      <p>STYLEGUIDE</p>
+                      <div class="button">
+                        <p>MORE</p>
+                        <p>Go style!</p>
+                        <div class="fillButton"></div>
+                      </div>
+                    </li>
+                    <li>
+                      <p>PROTOTYPE</p>
+
+                      <div class="button">
+                        <p>MORE</p>
+                        <p>Go proto!</p>
+                        <div class="fillButton"></div>
+                      </div>
+                    </li>
+                    <li>
+                      <p>WEBSITE</p>
+
+                      <div class="button">
+                        <p>MORE</p>
+                        <p>Go web site!</p>
+                        <div class="fillButton"></div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="part3">
+            <div class="contentWrap">
+              <p class="cap">WEBDESIGN I PUBLISHING</p>
+              <div class="textContent">
+                <div class="title">
+                  <h2><span>C</span>HROMA</h2>
+                  <h3>WEB <span>D</span>ESIGN</h3>
+                  <p class="subT">색상추천 & 색상조합 사이트</p>
+                </div>
+                <div class="middleText">
+                  <p>
+                    CHROMA는 사용자들이 간편하게 색상을 선택하고 조합할 수 있는
+                    도구입니다.
+                    <br />
+                    크로마에서 수집한 데이터를 통하여 사용자에게 색상조합을
+                    제공합니다.
+                    <br />
+                    상세페이지에선 크로마에서 추천하는 색상조합을 확인할 수
+                    있으며,
+                    <br />
+                    그에 관련한 여러 기능을 구현하였습니다.
+                  </p>
+                </div>
+                <div class="bottomText">
+                  <ul class="type">
+                    <li>
+                      <div class="titleType">TYPE</div>
+                      <div>PC publishing / Web design</div>
+                    </li>
+                    <li>
+                      <div class="titleType">PAGE</div>
+                      <div>Main + Sub*3</div>
+                    </li>
+                    <li>
+                      <div class="titleType korean">참여도</div>
+                      <div>50% (2인 프로젝트)</div>
+                    </li>
+                    <li>
+                      <div class="titleType">TOOL</div>
+                      <div class="imgWrap">
+                        <img src="img/icon_html.png" />
+                        <img src="img/icon_css.png" />
+                        <img src="img/icon_javascript.png" />
+                        <img src="img/icon_jquery.png" />
+                        <span></span>
+                        <img src="img/icon_ai.png" />
+                        <img src="img/icon_ps.png" />
+                        <img src="img/icon_ae.png" />
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="buttonWrap">
+                  <ul>
+                    <li>
+                      <p>STYLEGUIDE</p>
+                      <div class="button">
+                        <p>MORE</p>
+                        <p>Go style!</p>
+                        <div class="fillButton"></div>
+                      </div>
+                    </li>
+                    <li>
+                      <p>PROTOTYPE</p>
+
+                      <div class="button">
+                        <p>MORE</p>
+                        <p>Go proto!</p>
+                        <div class="fillButton"></div>
+                      </div>
+                    </li>
+                    <li>
+                      <p>WEBSITE</p>
+                      <a href="https://gisangyu.github.io/CHROMA/">
+                        <div class="button">
+                          <p>MORE</p>
+                          <p>Go web site!</p>
+                          <div class="fillButton"></div>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="part4">
+            <div class="contentWrap">
+              <p class="cap">REBDESIGN I PUBLISHING</p>
+              <div class="textContent">
+                <div class="title">
+                  <h2><span>C</span>HROMA</h2>
+                  <h3>WEB <span>R</span>EDESIGN</h3>
+                  <p class="subT">색상추천 & 색상조합 사이트</p>
+                </div>
+                <div class="middleText">
+                  <p>
+                    CHROMA는 사용자들이 간편하게 색상을 선택하고 조합할 수 있는
+                    도구입니다.
+                    <br />
+                    크로마에서 수집한 데이터를 통하여 사용자에게 색상조합을
+                    제공합니다.
+                    <br />
+                    상세페이지에선 크로마에서 추천하는 색상조합을 확인할 수
+                    있으며,
+                    <br />
+                    그에 관련한 여러 기능을 구현하였습니다.
+                  </p>
+                </div>
+                <div class="bottomText">
+                  <ul class="type">
+                    <li>
+                      <div class="titleType">TYPE</div>
+                      <div>Responsive Web / Redesign</div>
+                    </li>
+                    <li>
+                      <div class="titleType">PAGE</div>
+                      <div>Main + Sub*3</div>
+                    </li>
+                    <li>
+                      <div class="titleType korean">참여도</div>
+                      <div>100% (개인작업)</div>
+                    </li>
+                    <li>
+                      <div class="titleType">TOOL</div>
+                      <div class="imgWrap">
+                        <img src="img/icon_html.png" />
+                        <img src="img/icon_css.png" />
+                        <img src="img/icon_javascript.png" />
+                        <img src="img/icon_jquery.png" />
+                        <span></span>
+                        <img src="img/icon_ai.png" />
+                        <img src="img/icon_ps.png" />
+                        <img src="img/icon_ae.png" />
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="buttonWrap">
+                  <ul>
+                    <li>
+                      <p>STYLEGUIDE</p>
+                      <div class="button">
+                        <p>MORE</p>
+                        <p>Go style!</p>
+                        <div class="fillButton"></div>
+                      </div>
+                    </li>
+                    <li>
+                      <p>PROTOTYPE</p>
+
+                      <div class="button">
+                        <p>MORE</p>
+                        <p>Go proto!</p>
+                        <div class="fillButton"></div>
+                      </div>
+                    </li>
+                    <li>
+                      <p>WEBSITE</p>
+                      <a href="https://gisangyu.github.io/CHROMA/">
+                        <div class="button">
+                          <p>MORE</p>
+                          <p>Go web site!</p>
+                          <div class="fillButton"></div>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="con2">
+        <div class="content2">
+          <div class="bg"></div>
+          <div class="let_move">
+            <div class="con2_top">
+              <div class="wrap1">
+                <h3 class="con2_title">
+                  WEB DESIGN <span>(only design)</span>
+                </h3>
+                <ul class="webDesign_only">
+                  <li>
+                    <div class="overWrap">
+                      <div class="show"><img src="img/layout.jpg" /></div>
+                      <div class="detail">
+                        <div class="text_wrap">
+                          <h3>라코스테</h3>
+
+                          <p>라코스테 웹 리디자인</p>
+                          <p>작업시간 : 3일</p>
+                          <p>사용툴 : Photoshop, Illustrator</p>
+                          <a href="#3" class="more"> 더보기 </a>
+                        </div>
+                      </div>
+                    </div>
+                    <h2>라코스테 웹 리디자인</h2>
+                  </li>
+                  <li>
+                    <div class="overWrap">
+                      <div class="show"><img src="img/layout.jpg" /></div>
+                      <div class="detail">
+                        <div class="text_wrap">
+                          <h3>라코스테</h3>
+
+                          <p>라코스테 웹 리디자인</p>
+                          <p>작업시간 : 3일</p>
+                          <p>사용툴 : Photoshop, Illustrator</p>
+                          <a href="#3" class="more"> 더보기 </a>
+                        </div>
+                      </div>
+                    </div>
+                    <h2>픽사 웹 리디자인</h2>
+                  </li>
+                  <li>
+                    <div class="overWrap">
+                      <div class="show"><img src="img/layout.jpg" /></div>
+                      <div class="detail">
+                        <div class="text_wrap">
+                          <h3>라코스테</h3>
+
+                          <p>라코스테 웹 리디자인</p>
+                          <p>작업시간 : 3일</p>
+                          <p>사용툴 : Photoshop, Illustrator</p>
+                          <a href="#3" class="more"> 더보기 </a>
+                        </div>
+                      </div>
+                    </div>
+                    <h2>라코스테 웹 리디자인</h2>
+                  </li>
+                </ul>
+              </div>
+              <div class="wrap2">
+                <h3 class="con2_title">VECTOR GRAPHICS</h3>
+                <ul class="vector_design">
+                  <li>
+                    <div class="overWrap">
+                      <div class="show">
+                        <img
+                          src="img/logo_design.jpg"
+                          style="transform: translateY(-10%)"
+                        />
+                      </div>
+                      <div class="detail">
+                        <div class="text_wrap">
+                          <h3>로고 디자인</h3>
+
+                          <p>[이벤트 리더] 로고 공모</p>
+                          <p>작업시간 : 1일</p>
+                          <p>사용툴 : Illustrator</p>
+                          <a href="#3" class="more"> 더보기 </a>
+                        </div>
+                      </div>
+                    </div>
+                    <h2>로고 디자인</h2>
+                  </li>
+                  <li>
+                    <div class="overWrap">
+                      <div class="show">
+                        <img
+                          src="img/logo_design.jpg"
+                          style="transform: translateY(-10%)"
+                        />
+                      </div>
+                      <div class="detail">
+                        <div class="text_wrap">
+                          <h3>로고 디자인</h3>
+
+                          <p>[이벤트 리더] 로고 공모</p>
+                          <p>작업시간 : 1일</p>
+                          <p>사용툴 : Illustrator</p>
+                          <a href="#3" class="more"> 더보기 </a>
+                        </div>
+                      </div>
+                    </div>
+                    <h2>로고 디자인</h2>
+                  </li>
+                  <li>
+                    <div class="overWrap">
+                      <div class="show">
+                        <img
+                          src="img/logo_design.jpg"
+                          style="transform: translateY(-10%)"
+                        />
+                      </div>
+                      <div class="detail">
+                        <div class="text_wrap">
+                          <h3>로고 디자인</h3>
+
+                          <p>[이벤트 리더] 로고 공모</p>
+                          <p>작업시간 : 1일</p>
+                          <p>사용툴 : Illustrator</p>
+                          <a href="#3" class="more"> 더보기 </a>
+                        </div>
+                      </div>
+                    </div>
+                    <h2>로고 디자인</h2>
+                  </li>
+                </ul>
+              </div>
+              <div class="wrap3">
+                <h3 class="con2_title">ART DROWING</h3>
+                <ul class="vector_design">
+                  <li>
+                    <div class="overWrap">
+                      <div class="show">
+                        <img
+                          src="img/logo_design.jpg"
+                          style="transform: translateY(-10%)"
+                        />
+                      </div>
+                      <div class="detail">
+                        <div class="text_wrap">
+                          <h3>로고 디자인</h3>
+
+                          <p>[이벤트 리더] 로고 공모</p>
+                          <p>작업시간 : 1일</p>
+                          <p>사용툴 : Illustrator</p>
+                          <a href="#3" class="more"> 더보기 </a>
+                        </div>
+                      </div>
+                    </div>
+                    <h2>로고 디자인</h2>
+                  </li>
+                  <li>
+                    <div class="overWrap">
+                      <div class="show">
+                        <img
+                          src="img/logo_design.jpg"
+                          style="transform: translateY(-10%)"
+                        />
+                      </div>
+                      <div class="detail">
+                        <div class="text_wrap">
+                          <h3>로고 디자인</h3>
+
+                          <p>[이벤트 리더] 로고 공모</p>
+                          <p>작업시간 : 1일</p>
+                          <p>사용툴 : Illustrator</p>
+                          <a href="#3" class="more"> 더보기 </a>
+                        </div>
+                      </div>
+                    </div>
+                    <h2>로고 디자인</h2>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="con2_bottom">
+              <div class="wrap4">
+                <h3 class="con2_title">CLONE CODING</h3>
+                <ul class="picture_edit">
+                  <li>
+                    <div class="overWrap">
+                      <div
+                        class="show"
+                        style="
+                          background-color: white;
+                          width: 100%;
+                          height: 100%;
+                        "
+                      >
+                        <img
+                          src="img/story.png"
+                          style="transform: translate(-0%, 35%)"
+                        />
+                      </div>
+                      <div class="detail">
+                        <div class="text_wrap">
+                          <h3 style="margin-top: 0px; margin-bottom: 30px">
+                            스토리타코
+                          </h3>
+
+                          <div class="icon_wrap">
+                            <img src="img/icon_html.png" /><img
+                              src="img/icon_css.png"
+                            /><img src="img/icon_javascript.png" /><img
+                              src="img/icon_jquery.png"
+                            />
+                          </div>
+                          <p>작업시간 : 1일</p>
+                          <p>사용프로그램 : visual studio</p>
+                          <a href="#3" class="more"> 더보기 </a>
+                        </div>
+                      </div>
+                    </div>
+                    <h2>스토리타코 클론 클론코딩</h2>
+                  </li>
+                  <li>
+                    <div class="overWrap">
+                      <div class="show"><img src="img/sanlio.jfif" /></div>
+                      <div class="detail">
+                        <div class="text_wrap">
+                          <h3>산리오 코리아</h3>
+
+                          <p>HTML / CSS</p>
+                          <p>작업시간 : 1일</p>
+                          <p>사용프로그램 : visual studio</p>
+                          <a href="#3" class="more"> 더보기 </a>
+                        </div>
+                      </div>
+                    </div>
+                    <h2>산리오 코리아</h2>
+                  </li>
+                  <li>
+                    <div class="overWrap">
+                      <div
+                        class="show"
+                        style="
+                          background-color: white;
+                          width: 100%;
+                          height: 100%;
+                        "
+                      >
+                        <img
+                          src="img/story.png"
+                          style="transform: translate(-0%, 35%)"
+                        />
+                      </div>
+                      <div class="detail">
+                        <div class="text_wrap">
+                          <h3 style="margin-top: 0px; margin-bottom: 30px">
+                            스토리타코
+                          </h3>
+
+                          <div class="icon_wrap">
+                            <img src="img/icon_html.png" /><img
+                              src="img/icon_css.png"
+                            /><img src="img/icon_javascript.png" /><img
+                              src="img/icon_jquery.png"
+                            />
+                          </div>
+                          <p>작업시간 : 1일</p>
+                          <p>사용프로그램 : visual studio</p>
+                          <a href="#3" class="more"> 더보기 </a>
+                        </div>
+                      </div>
+                    </div>
+                    <h2>스토리타코 클론 클론코딩</h2>
+                  </li>
+                  <li>
+                    <div class="overWrap">
+                      <div class="show"><img src="img/sanlio.jfif" /></div>
+                      <div class="detail">
+                        <div class="text_wrap">
+                          <h3>산리오 코리아</h3>
+
+                          <p>HTML / CSS</p>
+                          <p>작업시간 : 1일</p>
+                          <p>사용프로그램 : visual studio</p>
+                          <a href="#3" class="more"> 더보기 </a>
+                        </div>
+                      </div>
+                    </div>
+                    <h2>산리오 코리아</h2>
+                  </li>
+                </ul>
+              </div>
+              <div class="wrap5">
+                <h3 class="con2_title">PICTURE / EDIT</h3>
+                <ul class="picture_edit">
+                  <li>
+                    <div class="overWrap">
+                      <div class="show"><img src="img/nago.jpg" /></div>
+                      <div class="detail">
+                        <div class="text_wrap">
+                          <h3>나고야 여행계획서</h3>
+
+                          <p>여행 팜플렛 디자인</p>
+                          <p>작업시간 : 1일</p>
+                          <p>사용툴 : Photoshop, Illustrator</p>
+                          <a href="#3" class="more"> 더보기 </a>
+                        </div>
+                      </div>
+                    </div>
+                    <h2>팜플렛 디자인</h2>
+                  </li>
+                  <li>
+                    <div class="overWrap">
+                      <div class="show"><img src="img/mia.png" /></div>
+                      <div class="detail">
+                        <div class="text_wrap">
+                          <h3>여행 사진전</h3>
+
+                          <p>미야지다케 사진 편집,보정</p>
+                          <p>작업시간 : 1일</p>
+                          <p>사용툴 : Photoshop</p>
+                          <a href="#3" class="more"> 더보기 </a>
+                        </div>
+                      </div>
+                    </div>
+                    <h2>사진 보정</h2>
+                  </li>
+                  <li>
+                    <div class="overWrap">
+                      <div class="show">
+                        <img src="img/fuku.png" style="width: 150%" />
+                      </div>
+                      <div class="detail">
+                        <div class="text_wrap">
+                          <h3>후쿠오카 여행기</h3>
+
+                          <p>사진 편집, 색상 보정</p>
+                          <p>작업시간 : 2일</p>
+                          <p>사용툴 : Photoshop</p>
+                          <a href="#3" class="more"> 더보기 </a>
+                        </div>
+                      </div>
+                    </div>
+                    <h2>사진 색상보정</h2>
+                  </li>
+
+                  <li>
+                    <div class="overWrap">
+                      <div class="show"><img src="img/mia.png" /></div>
+                      <div class="detail">
+                        <div class="text_wrap">
+                          <h3>영상편집</h3>
+
+                          <p>영상 편집, 영상 보정</p>
+                          <p>작업시간 : 2일</p>
+                          <p>사용툴 : Photoshop,after effect</p>
+                          <a href="#3" class="more"> 더보기 </a>
+                        </div>
+                      </div>
+                    </div>
+                    <h2>영상편집</h2>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="bg"></div>
+      <div class="line">
+        <div class="leftLine"></div>
+        <div class="rightLine"></div>
+      </div>
+      <div class="foot_text">
+        <h2>CONTECT</h2>
+        <p>yu2647921@naver.com</p>
+        <p>
+          지금까지 도전하는 웹 디자이너, 유기상이었습니다!
+          <br />
+          끝까지 봐주셔서 감사합니다.
+        </p>
+        <p>
+          본 사이트는 상업적 용도가 아닌 포트폴리오 용으로 제작되었습니다.
+          <br />
+          Copyright © 2023 by YU GI SANG All right reserved.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
